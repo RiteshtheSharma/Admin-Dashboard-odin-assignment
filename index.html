@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css_reset.css" />
     <title>Document</title>
-</head>
-<body class="grid">
-    <header></header>
-    <aside></aside>
-    <main></main>
-</body>
+  </head>
+  <body class="flex w">
+    <header>
+      <nav class="flex c w">
+        <div class="logo flex">
+          <img src="asset/main-logo.svg" alt="dashboard logo" srcset="" />
+          <h1>Dashboard</h1>
+        </div>
+        <ul class="general flex c w g3">
+          <li><a href="#">Home </a></li>
+          <li><a href="#">Profile </a></li>
+          <li><a href="#">Messages </a></li>
+          <li><a href="#">History </a></li>
+          <li><a href="#">Tasks </a></li>
+          <li><a href="#">Communities </a></li>
+        </ul>
+        <ul class="imp flex c w g3">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Support </a></li>
+          <li><a href="#">Privacy </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid r2">
+      <header class="grid r2 g4">
+        <nav class="grid"></nav>
+        <nav class="grid"></nav>
+      </header>
+      <aside></aside>
+    </main>
+  </body>
 </html>
