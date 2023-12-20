@@ -1,3 +1,5 @@
+ /* css reset  */ 
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -348,6 +350,37 @@
     display: none;
   }
   
+ /* css reset  */ 
+ :root {
+  --btn-color:#1992d4;
   
-
-  
+ }
+ body{
+  min-height:100vh
+ } 
+.grid{
+    display:grid;
+} 
+body.grid{
+grid-template-columns: 1fr 3fr; 
+grid-template-rows:repeat(auto-fit , minmax(min-content,auto));
+grid-template-areas: 
+"aside header header header"
+"aside main main main"
+"aside main main main"
+"aside main main main"
+"aside main main main"
+"aside main main main";
+} 
+body.grid header {
+background-color: aqua;
+grid-area : header;
+}
+body.grid aside {
+background-color: blue;
+grid-area:aside;
+}
+body.grid main {
+    background-color: brown;
+    grid-area:main
+}
