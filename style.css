@@ -20,6 +20,8 @@
  :root {
   --btn-color:#1992d4;
   --main-bg-theme :#e2e8f0;
+  --light-text-color:#636363;
+  --horizontal-rule-color:#d2d2d2;
  }
 /* margin */
 .mt-3{
@@ -66,6 +68,7 @@ button:hover{
 .grid{
     display:grid;
 } 
+
 .grid .c2{
   grid-template-columns: auto auto;
 }
@@ -88,6 +91,9 @@ button:hover{
 .grid .r2{
   grid-template-rows: auto auto;
 }
+.grid .rfill {
+  grid-template-rows: repeat(auto-fill, auto);
+}
 /* ---- grid ------*/
 
 
@@ -104,7 +110,9 @@ button:hover{
 .flex.w-r{
   flex-wrap: wrap-reverse;
 }
-
+.flex.vcenter{
+  align-items: center;
+}
 /* ----flex ----*/
  
 
@@ -134,6 +142,54 @@ div.search::before {
   height:20px;
   margin:auto 0  } 
  /*-- input ---*/
+
+
+
+
+
+/* card  */
+
+.card{
+  background-color: white;
+  padding:5px 25px;
+  text-align:left;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px #8d8c8c;
+}
+.card-body {
+ padding:15px 0;
+
+} 
+.card-body.with-img {
+  padding:7px 0;
+}
+.card-body.with-img img{
+  border-radius: 50%; 
+}
+.card-body.hr{
+  border-bottom: 1.5px solid var(--horizontal-rule-color);
+}
+.card h5.card-heading , .card-body p.card-text{
+  margin:0
+}
+.card-body .card-text{
+ color: var(--light-text-color);
+ font-size: 0.7rem;
+}
+
+
+/* --- card ----*/
+
+
+/* border */ 
+.box1{
+  box-shadow: 2px 1.5px 5px 0px #b8b6b6;
+}
+
+/* ---border --- */
+
+
+
 body.flex{
 
 } 
@@ -229,13 +285,27 @@ main header > nav  .user-profile{
 main.grid > aside.grid {
   box-shadow: inset 0 6px 5px rgb(180, 180, 180);
   background-color: var(--main-bg-theme);
+  padding:0 2vw;
+  font-family:"roboto regular";
   /* grid-template-columns: repeat(auto-fill,fit-content); */
   grid-template-columns: 80% auto ;
+
 } 
-main.grid > aside.grid :first-child{
-  /* background-color: #a819d4; */
+main.grid > aside.grid > :first-child .cards{
+  justify-items: space-between;
+  align-items: space-between;
 }
-main.grid > aside.grid :last-child{
+main.grid > aside.grid > :first-child .test{
+  background-color: #a819d4;
+  width:200px;
+  height:150px;
+}
+main.grid > aside.grid > :last-child{
   /* background-color: #38d419; */
+  grid-template-rows: min-content auto;
+  gap:20px
 }
+
+
+
 
