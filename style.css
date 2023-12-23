@@ -156,7 +156,8 @@ div.search::before {
 
 .card{
   background-color: white;
-  padding:5px 25px;
+
+  padding: 5px 1.5vw;
   text-align:left;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 0px #8d8c8c;
@@ -203,7 +204,7 @@ body.flex > header {
 background-color: var(--btn-color);
 /* width : fit-content; */
 color:white;
-padding:20px 5rem 0 20px;
+padding:20px calc(  1.5rem + 1vh) 0 20px;
 font-family: "roboto regular";
 }
 
@@ -215,13 +216,18 @@ nav .logo{
 
 nav .logo img {
   margin-right: 20px;
-  width:5rem;
+  width:2.5rem;
+}
+nav .logo h1 {
+  font-size: calc( 1.5em + 0.5vmin);
+  margin: 0.67em 0;
+
 }
 ul.general li::marker,ul.imp li::marker {
   margin:auto 0
 }
 ul.general li a,ul.imp li a{
-padding-left: 50px;
+padding-left: 1.5rem;
 }
 ul.general :first-child{
   list-style-image:url("asset/home.png")
@@ -291,10 +297,10 @@ main header > nav  .user-profile{
 main.grid > aside.grid {
   box-shadow: inset 0 6px 5px rgb(180, 180, 180);
   background-color: var(--main-bg-theme);
-  padding:0 2vw;
+  padding:0 1.5vw;
   font-family:"roboto regular";
   /* grid-template-columns: repeat(auto-fill,fit-content); */
-  grid-template-columns: 80% auto ;
+  grid-template-columns: auto clamp( 10% ,210px ,15% ) ;
 
 } 
 main.grid > aside.grid > :first-child .cards{
