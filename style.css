@@ -299,9 +299,8 @@ main.grid > aside.grid {
   background-color: var(--main-bg-theme);
   padding:0 1.5vw;
   font-family:"roboto regular";
-  /* grid-template-columns: repeat(auto-fill,fit-content); */
-  grid-template-columns: auto clamp( 10% ,210px ,15% ) ;
-
+ 
+  grid-template-columns: auto 220px;
 } 
 main.grid > aside.grid > :first-child .cards{
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
