@@ -22,6 +22,7 @@
   --main-bg-theme :#e2e8f0;
   --light-text-color:#636363;
   --horizontal-rule-color:#d2d2d2;
+  --card-side-boundary-color:#f0b429;
  }
 /* margin */
 .mt-3{
@@ -88,11 +89,15 @@ button:hover{
 }
 
 
-.grid .r2{
+.grid.r2{
   grid-template-rows: auto auto;
 }
-.grid .rfill {
+.grid.rfill {
   grid-template-rows: repeat(auto-fill, auto);
+}
+
+.grid.cfill {
+  grid-template-columns: repeat(auto-fill, auto);
 }
 /* ---- grid ------*/
 
@@ -155,6 +160,7 @@ div.search::before {
   text-align:left;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 0px #8d8c8c;
+  cursor: pointer;
 }
 .card-body {
  padding:15px 0;
@@ -292,14 +298,28 @@ main.grid > aside.grid {
 
 } 
 main.grid > aside.grid > :first-child .cards{
-  justify-items: space-between;
-  align-items: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  justify-content: space-between;
 }
-main.grid > aside.grid > :first-child .test{
-  background-color: #a819d4;
-  width:200px;
-  height:150px;
+main.grid > aside.grid > :first-child .cards .card {
+  border-left:7px solid var(--card-side-boundary-color);
+  transition: all 1s ease-in-out;
+  transform-origin: left;
 }
+main.grid > aside.grid > :first-child .cards .card .card-body.flex.c.g2.vcenter .icons {
+  align-self: flex-end;
+  width:40%;
+  justify-content: space-between;
+} 
+main.grid > aside.grid > :first-child .cards .card:hover{
+  background-color: var(--card-side-boundary-color);
+  border-left:7px solid white;
+} 
+main.grid > aside.grid > :first-child .cards .card:hover .card-heading{
+  color:white
+}
+
 main.grid > aside.grid > :last-child{
   /* background-color: #38d419; */
   grid-template-rows: min-content auto;
